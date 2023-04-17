@@ -1,0 +1,32 @@
+<div *ngFor="let item of data">{{ item.userId }} </div> 
+     <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Value</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of data">
+          <td>{{ item.userId }}</td>
+          <td>{{ item.id }}</td>
+        </tr>
+      </tbody>
+    </table> 
+     
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+      <label>
+        Name:
+        <input type="text" formControlName="name" />
+      </label>
+      <br />
+
+      <label>
+        Email:
+        <input type="email" formControlName="email" />
+      </label>
+      <br />
+
+      <button type="submit">Submit</button>
+    </form>
+   
